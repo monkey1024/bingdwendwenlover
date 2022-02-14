@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>520</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="timer">
+        <div>亲爱的，我已经爱你</div>
+        <div><b id="d"></b> 天 <b id="h"></b> 时 <b id="m"></b> 分 <b id="s"></b> 秒</div>
+    </div>
+    <div class="main">
+
+        <div class="body">
+
+            <div class="face-round">
+                <div class="face">
+                    <div class="eyes">
+                        <div class="left">
+                            <div class="ball"></div>
+                        </div>
+                        <div class="right">
+                            <div class="ball"></div>
+                        </div>
+                    </div>
+                    <div class="nose"></div>
+                    <div class="mouth">
+                        <div class="shape"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="ears">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="arm">
+                <div class="left"></div>
+                <div class="right">
+                    <div class="hand">
+                        ♥
+                    </div>
+                </div>
+            </div>
+            <div class="bg"></div>
+            <div class="logo"></div>
+            <div class="leg">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="foot">
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="road"></div>
+    </div>
+
+    <script>
+        function timer() {
+            let start = new Date(2020, 12, 1); // 写上你俩相识的时间
+            let t = new Date() - start;
+            let h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            let m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            let s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+</body>
+</html>
