@@ -5,5 +5,6 @@
 
 冰墩墩可以用来表白，在index.html中timer函数中的日期改为你俩相识的日期即可
 
-![](\images\preview.png)
+
+![](https://github.com/monkey1024/bingdwendwenlover/blob/master/images/preview.png)
 
